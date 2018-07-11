@@ -1,0 +1,43 @@
+/* SELECTOR UNIVERSAL 
+    afecta a todos los elementos de la web;
+*/
+/* *{
+    color:red;
+} */
+
+/* SELECTOR DE ELEMENTO */
+html{
+    font-size: 100%;
+}
+h1, .h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: maroon;
+    font-size: 24px;
+}
+h2, .h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: green; 
+    font-size: 16px;
+    font-size: 1rem; /*Fallback*/   
+}
+/* SELECTOR DE ID */
+/* #SelectorID {
+
+} */
+/* SELECTOR DE CLASE */
+/* Es preferible usar un selector de clase ya que sigue el principio DRY, es decir es
+reutilizable lo que genera menos lineas de código lo que lo hace más administrable */
+.background-pink{
+    background-color: pink;
+}
+/* NOMBRECLATURA BEM */
+.article {
+    
+}
+    .article__header {
+        font-family: Arial, Helvetica, sans-serif;
+        color: green;
+    }
+    .article--bgblue {
+        background-color: blue;
+    }
