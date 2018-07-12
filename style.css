@@ -41,3 +41,31 @@ reutilizable lo que genera menos lineas de código lo que lo hace más administr
     .article--bgblue {
         background-color: blue;
     }
+
+/* SELECTORES DE ATRIBUTO  */
+li[data-robotOwner="Koji Kabuto"]{
+    background-color: olive;
+    color: white;
+}
+li[data-robotOwner="Sayaka Yumi"]{
+    background-color: brown;
+    color: white;
+}
+input[type="email"]:valid{
+    background-color: peru;
+}
+input[type="email"]:focus:invalid{
+    background-color: red;
+}
+.checked{
+    width: 100px;
+    height: 100px;
+    background-color: peru;
+}
+/* .toggle:checked ~ .checked{
+    background-color: olive;
+} */
+.toggle:checked + .checked{
+    background-color: olive;
+}
+/* https://code.tutsplus.com/es/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
