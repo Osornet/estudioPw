@@ -1,0 +1,40 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    height: 500px;
+}
+.item{
+    width: 200px;
+    flex-grow: 1;
+    
+}
+.factorCrecimiento {
+    /* flex-grow: auto; por defecto */
+    flex-grow: 2;
+}
+.prioritario{
+    /* order: 0; por defecto*/
+    order: -1;
+}
+.baja {
+    align-self: flex-end;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+    input[type=text]{
+        width: 100%;
+    }
+    input[type=input]{
+        flex-basis: 100px;
+    }

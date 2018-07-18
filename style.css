@@ -1,71 +1,17 @@
-/* SELECTOR UNIVERSAL 
-    afecta a todos los elementos de la web;
-*/
-/* *{
-    color:red;
-} */
-
-/* SELECTOR DE ELEMENTO */
-html{
-    font-size: 100%;
+main {
+    display: table;
+    caption-side: top;
 }
-h1, .h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: maroon;
-    font-size: 24px;
-}
-h2, .h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: green; 
-    font-size: 16px;
-    font-size: 1rem; /*Fallback*/   
-}
-/* SELECTOR DE ID */
-/* #SelectorID {
-
-} */
-/* SELECTOR DE CLASE */
-/* Es preferible usar un selector de clase ya que sigue el principio DRY, es decir es
-reutilizable lo que genera menos lineas de código lo que lo hace más administrable */
-.background-pink{
-    background-color: pink;
-}
-/* NOMBRECLATURA BEM */
-.article {
-    
-}
-    .article__header {
-        font-family: Arial, Helvetica, sans-serif;
-        color: green;
+    header{
+        display:table-caption;
     }
-    .article--bgblue {
-        background-color: blue;
+    section{
+        display:table-cell;
+        background-color: maroon;
+        width: 80%;
     }
-
-/* SELECTORES DE ATRIBUTO  */
-li[data-robotOwner="Koji Kabuto"]{
-    background-color: olive;
-    color: white;
-}
-li[data-robotOwner="Sayaka Yumi"]{
-    background-color: brown;
-    color: white;
-}
-input[type="email"]:valid{
-    background-color: peru;
-}
-input[type="email"]:focus:invalid{
-    background-color: red;
-}
-.checked{
-    width: 100px;
-    height: 100px;
-    background-color: peru;
-}
-/* .toggle:checked ~ .checked{
-    background-color: olive;
-} */
-.toggle:checked + .checked{
-    background-color: olive;
-}
-/* https://code.tutsplus.com/es/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+    aside{
+        display:table-cell;
+        background-color: peru;
+        width: 20%;
+    }
