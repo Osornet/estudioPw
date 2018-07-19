@@ -1,17 +1,66 @@
-main {
-    display: table;
-    caption-side: top;
+/* "1 em " Es el font-size del contenedor 
+el tamaño del font-size por defecto del html son 16px
+
+como em depende mucho del contenedor se hace dificil adminitrarlo,
+por lo que por lo que lo mejor seria utilzar rem como tamaño de fuente.
+
+REM ( Root EM) funciona como un EM, pero se base es en la raiz del
+documento no en su contendor. La raiz del documento es el HTML
+
+documento que habla sobre la tipografia responsiva 
+https://ia.net/topics/responsive-typography-the-basics
+
+
+VW (viewPort width),VH (viewPort height) es recomendable utilizarlos en moviles pero no escritorio.
+*/
+
+html {
+    font-size: 100%;
+    
 }
-    header{
-        display:table-caption;
+
+h1 {
+    font-size: 1.5rem; 
+    
+}
+
+h1 a {
+    font-size: .8em;
+    /* font-size: 1em; */
+}
+span {
+    font-size: 1rem;
+}
+.square{
+    width: 1em;
+    height: 1em;
+    background-color: peru;
+    font-size: 50px;
+}
+    .square::after {
+        content: "";
+        width: .5em;
+        height: .5em;
+        background-color: red;
+        position: absolute;
+        top: .25em;
+        left: .25em;
     }
-    section{
-        display:table-cell;
-        background-color: maroon;
-        width: 80%;
+.container {
+    width: 80%;
+    
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: peru;
+    height: 50vw;
+    width: 100vw;
+}
+    li {
+        background-color: olive;
+        height: 20vh;
+        border-bottom: maroon 1px solid;
     }
-    aside{
-        display:table-cell;
-        background-color: peru;
-        width: 20%;
-    }
+
