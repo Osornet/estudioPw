@@ -1,0 +1,18 @@
+body{
+    width: 80;
+    max-width: 960;
+    margin: 0 auto;
+}
+section {
+    width: 100%;
+}
+aside {
+    text-align: center;
+    width: 100%;
+}
+h3 {
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+    margin-right: 2em;
+}
