@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-<html lang="es-CO">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>FrontPlatzi</title>
+    <title>Platzi whether</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
 </head>
 <body>
-    <h2>Título</h2>
-    <span class="weather-card__date centrar">Subtítulo de mi web</span>
-    <article class="weather-card">
-        <h3 class="weather-card__header">Sunnyvalle</h3>
-        <h4 class="weather-card__date">March, 25th</h4>
-        <img class="" src="" alt="">
-        <ul class="weather-card__footer">
-            <li class="weather-card__footer__item temperature" data-unidad="f">5</li>
-            <li class="weather-card__footer__item">Elemento 2</li>
-            <li class="weather-card__footer__item">Elemento 3</li>
-            <li class="weather-card__footer__item">Elemento 4</li>
-        </ul>
-    </article>
-    <article class="weather-card">
-        <h3 class="weather-card__header">Sunnyvalle</h3>
-        <h4 class="weather-card__date">March, 25th</h4>
-        <img class="" src="" alt="">
-        <ul class="weather-card__footer">
-            <li class="weather-card__footer__item temperature" data-unidad="c">5</li>
-            <li class="weather-card__footer__item">Elemento 2</li>
-            <li class="weather-card__footer__item">Elemento 3</li>
-            <li class="weather-card__footer__item">Elemento 4</li>
-        </ul>
-    </article>
+    <header class="main-header">
+        <h1>Platzi Whether</h1>
+        <h2>An awesone way to see how we burn by Global warning</h2>
+    </header>
+    <div class="loader">
+        Geolocalizando tu posición, por favor espere.
+    </div>
+    <form action = "" class="search">
+        <input type="text" data-input="cityAdd" class="search__text" placeholder="Agregar una nueva ciudad"/>
+        <input type="submit" data-button="add" class="search__btn btn" value="Añadir una nueva ciudad">
+        <button data-saved-cities class="search__btn btn">Ver Ciudades</button>
+    </form>
+    <main class="cards-group">
+        <template id="template--city">
+            <div class="card">
+                <header class="card__header">
+                    <h3 data-city class="card__title"></h3>
+                    <h4 data-time class="card__time"></h4>
+                </header>
+                <div class="card__info">
+                    <img data-icon src="" alt="" class="card__image">
+                    <span data-temp = "max" class="card__maxt"></span>
+                    <span data-temp = "min" class="card__mint"></span>
+                    <span data-temp = "current" class="card__temp"></span>
+                </div>
+            </div>
+        </template>
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="js/index.js"></script>
 </body>
 </html>

@@ -8,28 +8,63 @@ pagina para ver las familias mas comunes de fuentes de texto
 y su compativilidad con equipos
 https://www.cssfontstack.com/
 
+
+apis que vamos a utilizar
+
+
+
 */
 html {
-  font-family: 'Ovo', sans-serif;
-  font-size: 110%;
-}
-
-@media all and (min-width: 25em) {
-  html {
-    font-size: 80%;
-  }
+  font-size: 150%;
 }
 
 body {
+  font-family: 'Lato', serif;
   margin: 0;
   padding: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.btn {
+  display: inline-block;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: .8rem;
+  white-space: nowrap;
+  background-color: #ff4842;
+  border: none;
+  font-weight: bold;
+  cursor: pinter;
+  margin: 0;
+  margin-left: 1px;
+  padding: 1em;
+  border-radius: 1px;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
 }
 
 .main-header {
   text-align: center;
   background-color: #16210b;
   color: white;
-  padding: 4em;
+  padding: .4em;
   word-wrap: break-word;
   /* comando para que las palabras largas pasen a otra linea */
 }
@@ -53,61 +88,88 @@ body {
             background-color: black;
         }
     } */
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.search__text {
+  width: 75%;
+  font-size: 1rem;
+}
+
 .card {
   position: relative;
   /*lo mejor seria primero posicionar y despues estilizar*/
   height: 30vh;
   width: 100%;
+  background-color: eaeaea;
   background-size: cover;
+  background-position: center;
   color: white;
-  padding: 0.4em;
-  font-family: 'Megrim', cursive;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  text-shadow: 0 0 3px black;
+  padding: 1.5em;
+  font-family: 'Lato', cursive;
+  margin-bottom: .5em;
   -webkit-box-sizing: border-box;
-}
-
-.card--valencia {
-  background-image: url(img/valencia-small.png);
-}
-
-.card--mv {
-  background-image: url(img/mv.jpg);
+  box-sizing: border-box;
 }
 
 .card__title {
   margin: 0;
   text-align: center;
-  font-size: 2rem;
 }
 
-.card__date {
+.card__time {
   font-size: .7rem;
   margin: 0;
   text-align: center;
 }
 
-@media all and (min-width: 28em) {
-  .card--valencia {
-    background-image: url(img/valencia.png);
-    background-position: center;
-  }
-  .card--mv {
-    background-image: url(img/mv.jpg);
-    background-position: center;
-  }
+.card__time::after,
+.card__time::before {
+  content: " - ";
 }
 
 .card__info {
   position: absolute;
-  bottom: 0.4em;
-  left: 0.4em;
+  bottom: .4em;
+  left: .4em;
+  font-size: .7rem;
   text-align: center;
 }
 
 .card__image {
   display: block;
-  margin: 0 auto;
+}
+
+.card__maxt {
+  color: #37b948;
+  text-shadow: none;
+}
+
+.card__maxt::before {
+  content: "Max:";
+}
+
+.card__maxt::after {
+  content: "°C";
+}
+
+.card__mint {
+  color: #bc2929;
+  text-shadow: none;
+}
+
+.card__mint::before {
+  content: "Min:";
+}
+
+.card__mint::after {
+  content: "°C";
 }
 
 .card__temp {
@@ -116,12 +178,8 @@ body {
   line-height: 1;
 }
 
-.card__maxt::before {
-  content: "Max:";
-}
-
-.card__mint::before {
-  content: "Min:";
+.card__temp::after {
+  content: "°C";
 }
 
 /*
